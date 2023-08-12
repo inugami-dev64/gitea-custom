@@ -10,11 +10,12 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
+      - GITEA_CUSTOM=/data/gitea/custom
       - GITEA__database__DB_TYPE=mysql
       - GITEA__database__HOST=db:3306
       - GITEA__database__NAME=gitea
       - GITEA__database__USER=gitea
-      - GITEA__database__PASSWD=gitea
+      - GITEA__database__PASSWD=YFJtrM5KP5nb3STBNVgRHOXUdT56IpMM
     restart: always
     networks:
       - gitea
@@ -33,9 +34,9 @@ services:
     image: mysql:8
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=gitea
+      - MYSQL_ROOT_PASSWORD='q53buNjhB7rMAJCXvkaf/LcMXGhvFDga'
       - MYSQL_USER=gitea
-      - MYSQL_PASSWORD=gitea
+      - MYSQL_PASSWORD=YFJtrM5KP5nb3STBNVgRHOXUdT56IpMM
       - MYSQL_DATABASE=gitea
     networks:
       - gitea
